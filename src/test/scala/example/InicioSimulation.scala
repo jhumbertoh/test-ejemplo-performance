@@ -10,13 +10,10 @@ import io.gatling.core.structure.ScenarioBuilder
 
 class InicioSimulation extends Simulation {
 
-  private val baseUrl = "https://www.tudominiourl.com"
-  private val uri = "https://www.tudominiourl.com/api/v1/comics"
+  private val baseUrl = "https://gateway.marvel.com"
   private val contentType = "application/json"
-  private val endpoint = "/api/v1/comics"
-  private val requestCount = 5
-
-
+  private val endpoint = "/v1/public/characters?ts=1&apikey=YOURAPIKEY&hash=YOURHASH"
+  private val requestCount = 50
 
   val httpProtocol: HttpProtocolBuilder = http
     .baseURL(baseUrl)
